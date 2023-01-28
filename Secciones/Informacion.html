@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/icon" href="../Recursos/Logos/facultad-de-ingenieria-y-sistemas-logo-1.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../flexslider.css" type="text/css">
+
+    <!-- Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.backtotop.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+	<script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                touch: true,
+                pauseOnAction: false,
+                pauseOnHover: false,
+            });
+        });
+    </script>
+     <script type="text/javascript">
+        //jquery for toggle dropdown menus
+        $(document).ready(function(){
+          //toggle sub-menus
+          $(".sub-btn").click(function(){
+            $(this).next(".sub-menu").slideToggle();
+          });
+    
+          //toggle more-menus
+          $(".more-btn").click(function(){
+            $(this).next(".more-menu").slideToggle();
+          });
+        });
+    
+        //javascript for the responsive navigation menu
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+    
+        menuBtn.addEventListener("click", () => {
+          menu.classList.add("active");
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+    
+        //javascript for the navigation bar effects on scroll
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo"><img src="../Recursos/Logos/Escudo_de_la_Universidad_Técnica_de_Ambato.png" alt="" class="logo"></a>
+        <div class="navigation">
+          <ul class="menu">
+            <div class="close-btn"></div>
+            <li class="menu-item"><a href="../index.html" class="active">Inicio</a></li>
+            <li class="menu-item">
+              <a class="sub-btn" href="#">Investigación<i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/coordinador-de-investigacion">Coordinador de Investigación</a></li>
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/libros-revistas">Libros - Revistas</a></li>
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/proyectos-de-investigacion">Proyectos de Investigación</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a class="sub-btn" href="">Vinculación<i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/coordinacion-de-vinculacion">Coordinación de Vinculación</a></li>
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/convenios">Convenios</a></li>
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/programas-de-vinculacion">Programas de Vinculación</a></li>
+                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/proyectos-de-vinculacion">Proyectos de Vinculación</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+                <a class="sub-btn" href="Carreras.html">Carreras<i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                  <li class="sub-item"><a href="Carreras/Telecomunicaciones.html">Telecomunicaciones</a></li>
+                  <li class="sub-item"><a href="Carreras/Industrial.html">Ingenieria Industrial</a></li>
+                  <li class="sub-item"><a href="Carreras/Software.html">Software</a></li>
+                  <li class="sub-item"><a href="Carreras/Tecnologias.html">Tecnologias de la Información</a></li>
+                  <li class="sub-item"><a href="Carreras/Automatizacion.html">Procesos de Automatización</a></li>
+                </ul>
+              </li>
+            <li class="menu-item"><a href="Informacion.html">Información</a></li>
+            <li class="menu-item"><a href="Contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="menu-btn"></div>
+    </header>
+
+
+    <section class="back-Slider">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="../Recursos/Fondos/MatriculateYAAbrilSeptiembre2022slider.png" alt="Slider-Imagen">
+            </li>
+            <li>
+                <img src="../Recursos/Fondos/bannerfiseicorreos.png" alt="Slider-Imagen">
+            </li>
+            <li>
+                <img src="../Recursos/Fondos/banner_acreditacin.png" alt="Slider-Imagen">
+            </li>
+            <li>
+              <img src="../Recursos/Fondos/aranceles.png" alt="Slider-Imagen">
+          </li>
+        </ul>
+    </div> 
+    <a id="backtotop"><i class="fa fa-chevron-up"></i></a>
+    </section>
+    <section class="Titule">
+      <div class="Titule">
+        <h1>Sección de Información</h1>
+      </div>
+    </section>
+    <section class="back">
+      <div class="Titule">
+        <h1>Información</h1>
+      </div>
+    </section>
+    <section>
+      <div class="card-group">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+  </section>
+    <section class="back">
+      <section>
+        <div>
+          <h3></h3>
+          <article></article>
+        </div>
+      </section>
+    </section>
+    <section>
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Sobre Nosotros</div>
+              <p>La Universidad Tecnica de Ambato por sus niveles de excelencia academica se constituye como un centro de formacion superior con liderazgo y proyección.</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contactanos</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>FISEI: (032) 851894 - 411537</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>FISEI@uta.edu.ec.</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Otros Servicios</div>
+            <div><a href="#">Comunidad Facultad</a></div>
+            <div><a href="#">Infraestructura</a></div>
+            <div><a href="#">Formatos-Descargas</a></div>
+            <div><a href="#">Bibliotecas</a></div>
+            <div><a href="#">Sistema Integrado</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">Encuentranos</div>
+            <form action="#">
+              <div>
+                <p>Av. Los Chasquis y Rio Guayllabamba - Ambato, Ecuador </p>
+              </div>
+              <div class="media-icons">
+                <a href="https://www.facebook.com/UniversidadTecnicadeAmbatoOficial/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"><img img src="../Recursos/Logos/Face.png"  title="Facebook" class="reduction" /></i></a>
+                <a href="https://www.instagram.com/utecnicaambato/" title="Instagram" target="_blank"><i class="fab fa-instagram"><img src="../Recursos/Logos/insta.png"  alt="Pinterest"  title="Instagram"  class="reduction"/></i></a>
+                <a href="https://twitter.com/UTecnicaAmbato" title="Twitter" target="_blank"><i class="fab fa-twitter"><img src="../Recursos/Logos/twiter.png"  alt="Twitter"  title="Twitter" class="reduction" /></i></a>
+                <a href="https://outlook.office.com/mail/" title="Outolook" target="_blank"><i class="fab fa-linkedin-in"><img src="../Recursos/Logos/outlok.png"  alt="Outlook"  title="Outlook" class="reduction"/></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright &#169; 2020 <a href="#">Christian López</a> Todos los derechos reservados</p>
+        </div>
+      </footer>
+    </section>
+
+    <div class="social">
+		<ul>
+			<li><a href="https://outlook.office.com/mail/" target="_blank" class="icon-section"><img src="../Recursos/Logos/correo_medidas_32.png" id="imgSection" class="Reduccion"></a></li>
+			<li><a href="https://deadv.uta.edu.ec/" target="_blank" class="icon-section"><img src="../Recursos/Logos/deadv_48.png" id="imgSection" class="Reduccion"></a></li>
+			<li><a href="https://fisei.uta.edu.ec/v4.0/index.php/servicios-web" target="_blank" class="icon-section"><img src="../Recursos/Logos/servicios-web.png" id="imgSection" class="Reduccion"></a></li>
+			<li><a href="https://www.uta.edu.ec/v4.0/informeRendicionCuentas2021/mobile/index.html" target="_blank" class="icon-section"><img src="../Recursos/Logos/rendicion-de-cuentas.png" id="imgSection" class="Reduccion"></a></li>
+			<li><a href="http://seguimientograduados.uta.edu.ec/" target="_blank" class="icon-section"><img src="../Recursos/Logos/graduados.png" id="imgSection" class="Reduccion"></a></li>
+            <li><a href="https://cultura.uta.edu.ec/v4.0/" target="_blank" class="icon-section"><img src="../Recursos/Logos/13644-200.png" id="imgSection" class="Reduccion"></a></li>
+        </ul>
+	</div> 
+</body>
+</html>
