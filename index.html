@@ -1,338 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="icon" type="image/icon" href="Recursos/Logos/facultad-de-ingenieria-y-sistemas-logo-1.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="flexslider.css" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<script src="js/jquery.flexslider.js"></script>
-	<script type="text/javascript" charset="utf-8">
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-                touch: true,
-                pauseOnAction: false,
-                pauseOnHover: false,
-            });
-        });
-    </script>
-     <script type="text/javascript">
-        //jquery for toggle dropdown menus
-        $(document).ready(function(){
-          //toggle sub-menus
-          $(".sub-btn").click(function(){
-            $(this).next(".sub-menu").slideToggle();
-          });
-    
-          //toggle more-menus
-          $(".more-btn").click(function(){
-            $(this).next(".more-menu").slideToggle();
-          });
-        });
-    
-        //javascript for the responsive navigation menu
-        var menu = document.querySelector(".menu");
-        var menuBtn = document.querySelector(".menu-btn");
-        var closeBtn = document.querySelector(".close-btn");
-    
-        menuBtn.addEventListener("click", () => {
-          menu.classList.add("active");
-        });
-    
-        closeBtn.addEventListener("click", () => {
-          menu.classList.remove("active");
-        });
-    
-        //javascript for the navigation bar effects on scroll
-        window.addEventListener("scroll", function(){
-          var header = document.querySelector("header");
-          header.classList.toggle("sticky", window.scrollY > 0);
-        });
-    </script>
+    <meta charset="utf-8">
+    <title>Portafolio Web</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo"><img src="Recursos/Logos/Escudo_de_la_Universidad_Técnica_de_Ambato.png" alt="" class="logo"></a>
-        <div class="navigation">
-          <ul class="menu">
-            <div class="close-btn"></div>
-            <li class="menu-item"><a href="index.html" class="active">Inicio</a></li>
-            <li class="menu-item">
-              <a class="sub-btn" href="#">Investigación<i class="fas fa-angle-down"></i></a>
-              <ul class="sub-menu">
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/coordinador-de-investigacion">Coordinador de Investigación</a></li>
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/libros-revistas">Libros - Revistas</a></li>
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/investigacion/proyectos-de-investigacion">Proyectos de Investigación</a></li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a class="sub-btn" href="">Vinculación<i class="fas fa-angle-down"></i></a>
-              <ul class="sub-menu">
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/coordinacion-de-vinculacion">Coordinación de Vinculación</a></li>
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/convenios">Convenios</a></li>
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/programas-de-vinculacion">Programas de Vinculación</a></li>
-                <li class="sub-item"><a href="https://fisei.uta.edu.ec/v4.0/index.php/vinculacion/proyectos-de-vinculacion">Proyectos de Vinculación</a></li>
-              </ul>
-            </li>
-            <li class="menu-item">
-                <a class="sub-btn" href="#">Carreras<i class="fas fa-angle-down"></i></a>
-                <ul class="sub-menu">
-                  <li class="sub-item"><a href="Secciones/Carreras/Telecomunicaciones.html">Telecomunicaciones</a></li>
-                  <li class="sub-item"><a href="Secciones/Carreras/Industrial.html">Ingenieria Industrial</a></li>
-                  <li class="sub-item"><a href="Secciones/Carreras/Software.html">Software</a></li>
-                  <li class="sub-item"><a href="Secciones/Carreras/Tecnologias.html">Tecnologias de la Información</a></li>
-                  <li class="sub-item"><a href="Secciones/Carreras/Automatizacion.html">Procesos de Automatización</a></li>
-                </ul>
-              </li>
-            <li class="menu-item"><a href="Secciones/Informacion.html">Información</a></li>
-            <li class="menu-item"><a href="Secciones/Contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="menu-btn"></div>
-    </header>
-    <section class="back-Slider">
-      <div class="flexslider">
-          <ul class="slides">
-              <li>
-                  <img src="Recursos/Fondos/MatriculateYAAbrilSeptiembre2022slider.png" alt="Slider-Imagen">
-              </li>
-              <li>
-                  <img src="Recursos/Fondos/bannerfiseicorreos.png" alt="Slider-Imagen">
-              </li>
-              <li>
-                  <img src="Recursos/Fondos/banner_acreditacin.png" alt="Slider-Imagen">
-              </li>
-              <li>
-                <img src="Recursos/Fondos/aranceles.png" alt="Slider-Imagen">
-            </li>
-          </ul>
-      </div> 
-    </section>
-    <section class="Titule">
-      <div class="Titule">
-        <h1>Sección de Información</h1>
-      </div>
-    </section>
 
-    <section class="back">
-      <div class="Titule">
-        <h1>Noticias</h1>
-      </div>
-    </section>
-
-    <section class="back" id="seccion">
-        <div class="contenedorGaleria">
-          
-            <div class="card">
-                <img src="Recursos/Fondos/Inicio/FISEI1.png">
-                <h4>Convocatoria</h4>
-                <p>Convocatoria para el proceso de selección de ayudantes de Investigación para la FISEI</p>
-                <a href="https://fisei.uta.edu.ec/v4.0/index.php/11-noticias-sala-de-prensa/196-ayudante-de-investigacion" target="_blank">Leer más</a>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg navbar-light py-3 py-lg-0 px-lg-5 text-white" style="background:#000000;">
+        <a href="index.html" >
+            <a class="navbar-brand" href="#" >
+                <img src="img/6c5a50cb-6965-4ec7-ab26-de41f4210828.jpg" height="50" alt="Logo"
+                  loading="lazy" class="rounded-circle me-2" />
+                  <small class="m-0 display-5" style="color: #0BCEAF; font-weight: 500;"><span style="color: #E1D1D4;">Chris</span>Shop</small>
+            </a>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" style="background: #7a797a">
+            <span class="navbar-toggler-icon" style="color: #EAE0E2"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse" >
+            <div class="navbar-nav m-auto py-0" style="color: #EAE0E2">
+                <a href="#home" class="nav-item nav-link active">Inicio</a>
+                <a href="#about" class="nav-item nav-link">Sobre mi</a>
+                <a href="#qualification" class="nav-item nav-link">Calidad</a>
+                <a href="#skill" class="nav-item nav-link">Habilidades</a>
+                <a href="#service" class="nav-item nav-link">Servicios</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#contact" class="nav-item nav-link">Contactanos</a>
             </div>
-            
-            <div class="card">
-                <img src="Recursos/Fondos/Inicio/casaabiertaportada.png">
-                <h4>Casa Abierta</h4>
-                <p>Proyectos Integradores, Investigación y Vinculación<br>Agora de la Facultad de Ingeniería en Sistema, Electrónica e Industrial</p>
-                <a href="https://fisei.uta.edu.ec/v4.0/index.php/11-noticias-sala-de-prensa/205-casa" target="_blank">Leer más</a>
-            </div>
-
-            <div class="card">
-              <img src="Recursos/Fondos/Inicio/Conferencias_FISEI.png">
-              <h4>Conferencias de Innovación</h4>
-              <p>Eventos Académicos de Conferencias de Innovacion Tecnológica FISEI 2022</p>
-              <a href="https://fisei.uta.edu.ec/v4.0/index.php/11-noticias-sala-de-prensa/197-conferencias-de-innovacion-tecnologica-fisei-2022" target="_blank">Leer más</a>
-          </div>
         </div>
-        <br>
-    </section>
-    <section class="back" id="seccion">
-      <div class="contenedorGaleria">
-        
-          <div class="card">
-              <img src="Recursos/Fondos/Inicio/curato.png">
-              <h4>IV Congreso</h4>
-              <p>Congreso de Ciencia de la Computación, Electrónica e Ingeniería Industrial</p>
-              <a href="" target="_blank">Leer más</a>
-          </div>
-          
-          <div class="card">
-              <img src="Recursos/Fondos/Inicio/Sala-Zoom-FISEI.png">
-              <h4>Salas de Teleconferencia</h4>
-              <p>Aulas de Clases virtuales, Salas de clase de Teleconferencia ZOOM</p>
-              <a href="https://fisei.uta.edu.ec/v4.0/index.php/11-noticias-sala-de-prensa/208-sala-de-clase-teleconferencia-zoom2022-2" target="_blank">Leer más</a>
-          </div>
+    </nav>
 
-          <div class="card">
-            <img src="Recursos/Fondos/Inicio/PROGRAMA_BECAS.jpeg">
-            <h4>Becas Estudiantiles</h4>
-            <p>Difusión de Programa de Becas Estudiantiles FISEI</p>
-            <a href="https://fisei.uta.edu.ec/v4.0/index.php/11-noticias-sala-de-prensa/206-becas" target="_blank">Leer más</a>
+
+    <!-- Navbar End 
+    <section id="intro">   
+        <div class="intro-overlay"></div>	
+        <div class="intro-content">
+            <div class="row">
+                <div class="col-twelve">
+                    <h5>Hola a todos.</h5>
+                    <h1>Soy Sebastian Tixilema.</h1>
+                    <p class="intro-position">
+                        <span>Back-end Developer</span>
+                        <span>Java/C# Developer</span> 
+                    </p>
+                    <a class="button stroke smoothscroll" href="#about" title="">Mas Acerca de mi</a>
+                </div>  
+            </div>   		 		
         </div>
-      </div>
-      <br>
-  </section>
-  <section class="back">
-    <div class="Titule">
-      <h1>Carreras</h1>
-    </div>
-  </section>
-  <section class="back">
-    <div class="row">
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/codigo-.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Software</span></h2>
-                <p>Se especializa en el diseño y el desarrollo de aplicaciones de software</p>
-                <div class="more">
-                <a href="Secciones/Carreras/Software.html" class="read-more">Leer <span>Más</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
-                </div>
+        <ul class="intro-social">        
+          <li><a href="https://github.com/SebasTix02"><i class="fa fa-github"></i></a></li>
+       </ul>    	
+    </section> -->
+
+    <!-- Header Start -->
+    <section id="intro">
+        <div class="intro-overlay"></div>	 
+        <div class="container-fluid bg d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                        <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/6c5a50cb-6965-4ec7-ab26-de41f4210828.jpg" alt="">
+                    </div>
+                    <div class="col-lg-7 text-center text-lg-left">
+                        <h5 class="text font-weight-normal mb-3" style="color: #0BCEAF; font-family: Arial Black, sans-serif; font-size: 22px; line-height: 1.565;
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        letter-spacing: .3rem;
+                        text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">Hola a todos.</h5>
+                        <h1 class="display-3 text-uppercase  mb-2" style="-webkit-text-stroke: 2px #000000; color: #fff;">Soy Christian López Pillajo</h1>
+                        <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                        <div class="typed-text d-none font-weight-normal" style="color: #1eaf95; font-weight: 500;">Desarrollador Web, Ilustrador, Artista Plástico, Desarrollador, Diseñador</div>
+                        <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/Automatizacion-Industrial.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Automatización</span></h2>
-                <p>Formación científica y técnica que contribuye al desarrollo de la sociedad</p>
-                <div class="more">
-                <a href="Secciones/Carreras/Automatizacion.html" class="read-more">Leer <span>Mas</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
-                </div>
-                </div>
+    </section>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Sobre</h1>
+                <h1 class="position-absolute text-uppercase" style="color:#0BCEAF;">Sobre mi</h1>
             </div>
-        </div>
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/industrial.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Industrial</span></h2>
-                <p>Desarrollo y gestión de sistemas de planeación y control de la producción</p>
-                <div class="more">
-                <a href="Secciones/Carreras/Industrial.html" class="read-more">Leer <span>Mas</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
                 </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
+                    <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Nombre: <span class="text-secondary">Christian López Pillajo</span></h6></div>
+                        
+                        <div class="col-sm-6 py-2"><h6>Profesión: <span class="text-secondary">Estudiante</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">10 Years</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Telefono: <span class="text-secondary">+593 985184705</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">c.ristian-lp@hotmail.com</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Dirección: <span class="text-secondary">Esmeraldas - Ecuador</span></h6></div>
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/nuevas-tecnologias.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Tecnologias</span></h2>
-                <p>Demostrar actitudes que le permitan desarrollar actividades tecnologicas</p>
-                <div class="more">
-                <a href="Secciones/Carreras/Tecnologias.html" class="read-more">Leer <span>Mas</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
-                </div>
-                </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification" style="background: #fff;">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text" style="-webkit-text-stroke: 1px #ccc8c9; color: #ccc8c9;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
             </div>
-        </div>
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/tecnologas-de-las-telecomunicaciones.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Telecomunicaciones</span></h2>
-                <p>Implementación de comunicaciones analógicas y digitales</p>
-                <div class="more">
-                <a href="Secciones/Carreras/Telecomunicaciones.html" class="read-more">Leer <span>Mas</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
+                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-        </div>
-        <div class="image">
-            <img src="Recursos/Fondos/Carreras/ingeniería-electrónica-Universidad-Sergio-Arboleda-mundo-4.0-Iot-.jpg" alt="">
-            <div class="details">
-                <h2>Carrera de <span>Electronica</span></h2>
-                <p>Desarrollo de la tecnología digital y procesamiento digital de señales</p>
-                <div class="more">
-                <a href="Secciones/Carreras/" class="read-more">Leer <span>Mas</span></a>
-                <div class="icon-links">
-                    <a href="#"><i class="fas fa-heart" ><img src="Recursos/Logos/FACEBOOK.PNG" class="ImgUrl"></i></a>
-                    <a href="#"><i class="fas fa-eye"></i></a>
-                    <a href="#"><i class="fas fa-paperclip"></i></a>
-                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Expericence</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-    <section>
-      <footer>
-          <div class="content">
-            <div class="left box">
-              <div class="upper">
-                <div class="topic">Sobre Nosotros</div>
-                <p>La Universidad Tecnica de Ambato por sus niveles de excelencia academica se constituye como un centro de formacion superior con liderazgo y proyección.</p>
-              </div>
-              <div class="lower">
-                <div class="topic">Contactanos</div>
-                <div class="phone">
-                  <a href="#"><i class="fas fa-phone-volume"></i>FISEI: (032) 851894 - 411537</a>
-                </div>
-                <div class="email">
-                  <a href="#"><i class="fas fa-envelope"></i>FISEI@uta.edu.ec.</a>
-                </div>
-              </div>
-            </div>
-            <div class="middle box">
-              <div class="topic">Otros Servicios</div>
-              <div><a href="#">Comunidad Facultad</a></div>
-              <div><a href="#">Infraestructura</a></div>
-              <div><a href="#">Formatos-Descargas</a></div>
-              <div><a href="#">Bibliotecas</a></div>
-              <div><a href="#">Sistema Integrado</a></div>
-            </div>
-            <div class="right box">
-              <div class="topic">Encuentranos</div>
-              <form action="#">
-                <div>
-                  <p>Av. Los Chasquis y Rio Guayllabamba - Ambato, Ecuador </p>
-                </div>
-                <div class="media-icons">
-                  <a href="https://www.facebook.com/UniversidadTecnicadeAmbatoOficial/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"><img img src="Recursos/Logos/Face.png"  title="Facebook" class="reduction" /></i></a>
-                  <a href="https://www.instagram.com/utecnicaambato/" title="Instagram" target="_blank"><i class="fab fa-instagram"><img src="Recursos/Logos/insta.png"  alt="Pinterest"  title="Instagram"  class="reduction"/></i></a>
-                  <a href="https://twitter.com/UTecnicaAmbato" title="Twitter" target="_blank"><i class="fab fa-twitter"><img src="Recursos/Logos/twiter.png"  alt="Twitter"  title="Twitter" class="reduction" /></i></a>
-                  <a href="https://outlook.office.com/mail/" title="Outolook" target="_blank"><i class="fab fa-linkedin-in"><img src="Recursos/Logos/outlok.png"  alt="Outlook"  title="Outlook" class="reduction"/></i></a>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="bottom">
-            <p>Copyright &#169; 2020 <a href="#">Christian López</a> Todos los derechos reservados</p>
-          </div>
-        </footer>
-      </section>
+    <!-- Qualification End -->
 
-    <div class="social">
-		<ul>
-			<li><a href="https://outlook.office.com/mail/" target="_blank" class="icon-section"><img src="Recursos/Logos/correo_medidas_32.png" id="imgSection" class="Reduccion"></a></li>
-			<li><a href="https://deadv.uta.edu.ec/" target="_blank" class="icon-section"><img src="Recursos/Logos/deadv_48.png" id="imgSection" class="Reduccion"></a></li>
-			<li><a href="https://fisei.uta.edu.ec/v4.0/index.php/servicios-web" target="_blank" class="icon-section"><img src="Recursos/Logos/servicios-web.png" id="imgSection" class="Reduccion"></a></li>
-			<li><a href="https://www.uta.edu.ec/v4.0/informeRendicionCuentas2021/mobile/index.html" target="_blank" class="icon-section"><img src="Recursos/Logos/rendicion-de-cuentas.png" id="imgSection" class="Reduccion"></a></li>
-			<li><a href="http://seguimientograduados.uta.edu.ec/" target="_blank" class="icon-section"><img src="Recursos/Logos/graduados.png" id="imgSection" class="Reduccion"></a></li>
-            <li><a href="https://cultura.uta.edu.ec/v4.0/" target="_blank" class="icon-section"><img src="Recursos/Logos/13644-200.png" id="imgSection" class="Reduccion"></a></li>
-        </ul>
-	</div> 
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">HTML</h6>
+                            <h6 class="font-weight-bold">95%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">CSS</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">PHP</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Javascript</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Java</h6>
+                            <h6 class="font-weight-bold">95%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skill End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service" style="background: #fff;">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Design</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Development</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Design</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Development</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">SEO</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Content Creating</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Galeria</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Mi Portafolio</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">Todo</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Diseño</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Desarrollo</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Ilustración</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5" id="testimonial" style="background: #fff;">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact" style="background: #fff;">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                    Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg text-white mt-5 py-5 px-sm-3 px-md-5" style="background: #000;">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">ChrisShop</a>. Todos los derechos reservados. <br>Diseñado por <a class="text-white font-weight-bold">Christian López</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
