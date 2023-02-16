@@ -6456,8 +6456,25 @@ a.close.disabled {
 .bg-primary {
   background-color: #0BCEAF !important;
 }
+.bg-degradado {
+  background-color: #7f6a9a !important;
+  opacity: .7;
+}
+
+.bg-degradado2 {
+  background-color: #2d405d !important;
+  opacity: .7;
+}
+.bg-degradado3 {
+  background-color: #d89d92 !important;
+  opacity: .7;
+}
+.bg-degradado1 {
+  background-color: #947ca7 !important;
+  opacity: .7;
+}
 .bg-img {
-  background-color: #927aa7 !important;
+  background-color: #e1d1d4 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -10060,6 +10077,7 @@ h6,
   align-items: center;
   justify-content: center;
   border-radius: 60px;
+  padding: 15px;
 }
 
 .portfolio-item .portfolio-btn {
@@ -10068,13 +10086,13 @@ h6,
   height: 0;
   top: 50%;
   left: 50%;
-  border-radius: 4px;
+  border-radius: 40px;
   opacity: 0;
   transition: .5s;
 }
 
 .portfolio-item:hover .portfolio-btn {
-  opacity: 1;
+  opacity: 0.9;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
   top: 30px;
