@@ -9681,6 +9681,10 @@ button.bg-dark:focus {
   color: #0BCEAF !important;
 }
 
+.text-primary1 {
+  color: #927aa7 !important;
+}
+
 a.text-primary:hover, a.text-primary:focus {
   color: #078571 !important;
 }
@@ -10110,11 +10114,11 @@ h6,
   width: 12px;
   height: 12px;
   border-radius: 10px;
-  background: #dddddd;
+  background: #fff;
 }
 
 .testimonial-carousel .owl-dot.active {
-  background: #0BCEAF;
+  background: #927aa7;
 }
 
 .blog-date {
