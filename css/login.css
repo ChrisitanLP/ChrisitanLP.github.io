@@ -478,11 +478,11 @@ button.btn-goback:hover {
     height: 65vh;
   }
   .form-styling{
-    width: 40vh;
+    width: 35vh;
     height: 5vh;
   }
   .btn-signin{
-    width: 40vh;
+    width: 35vh;
     height: 6vh;
   }
 }
