@@ -12,7 +12,7 @@
     <body>
 
         <section id="header">
-            <a href="#"><img src="../img/about/logo.png" class="logo" alt=""></a>
+            <a href="../index.html"><img src="../img/about/logo.png" class="logo" alt=""></a>
             <div>
                 <ul id="navbar">
                     <li><a href="../index.html">Inicio</a></li>
@@ -41,15 +41,15 @@
                   <li class="signin-active"><a class="btn" id="signin-btn">Iniciar Sesión</a></li>
                 </ul>
               </div>
-              <div ng-app ng-init="checked = false">
-                <form class="form-signin" action="" method="POST" name="form">
+              <div class="formContainer">
+                <form class="form-signin">
                   
                   <label for="username">Usuario:</label>
                   <input class="form-styling" type="text" name="usuario" placeholder=""/>
                   <label for="password">Contraseña: </label>
                   <input class="form-styling" type="text" name="clave" placeholder=""/>
 
-                  <div class="btn-animate">
+                  <div class="">
                     <input type="submit" id="a" class="btn-signin" value="Iniciar Sesión">
                   </div>
 
@@ -97,15 +97,6 @@
                 <a href="#">Lista de Deseos</a>
                 <a href="#">Enviar mi Orden</a>
                 <a href="#">Ayuda</a>
-            </div>
-
-            <div class="col install">
-                <h4>Instalar App</h4>
-                <p>Desde App Store y Play Store</p>
-                <div class="row">
-                    <img src="../img/pay/app.jpg">
-                    <img src="../img/pay/play.jpg">
-                </div>
             </div>
 
             <div class="copyright">

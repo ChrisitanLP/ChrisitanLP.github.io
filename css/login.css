@@ -172,7 +172,7 @@ li {
     fill: rgba(255,255,255,.03);
 }
 
-.form-signin #a, .form-signup #a {
+.form-signin #a{
   color: #ffffff;
   font-size: 15px;
   background: #088178;
@@ -470,4 +470,20 @@ button.btn-goback:hover {
   cursor: pointer;
   fill: #1059FF;
   transform: rotate(180deg);
+}
+
+@media (max-width:799px){
+  .frame{
+    width: 50vh;
+    height: 65vh;
+    padding-right: 8vh;
+  }
+  .form-styling{
+    width: 40vh;
+    height: 5vh;
+  }
+  .btn-signin{
+    width: 40vh;
+    height: 6vh;
+  }
 }
