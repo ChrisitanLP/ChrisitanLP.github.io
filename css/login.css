@@ -474,9 +474,8 @@ button.btn-goback:hover {
 
 @media (max-width:799px){
   .frame{
-    width: 50vh;
+    width: 45vh;
     height: 65vh;
-    padding-right: 8vh;
   }
   .form-styling{
     width: 40vh;
