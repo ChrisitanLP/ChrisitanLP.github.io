@@ -1,0 +1,89 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .body {
+      background: linear-gradient(135deg, #c5c9e3 0%, #b8bdd8 100%);
+      font-family: 'Press Start 2P', monospace;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .start-screen .main-content {
+        text-align: center;
+        padding: 1.5rem 2rem;
+        width: 100%;
+        max-width: 1100px;
+        position: relative;
+    }
+    
+    .start-screen .title-image {
+        padding-top: 5px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .start-screen .text-top {
+      font-size: 1rem;
+      margin-top: 6.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 2px #00000099;
+      letter-spacing: 1px;
+    }
+
+    .start-screen .press-start {
+      margin: 2rem 0;
+      padding-top: 20px;
+      font-size: 1rem;
+      animation: blink 1s steps(3, start) infinite;
+    }
+
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .start-screen .image-container {
+        margin-top: -270px;
+        margin-left: -180px;
+        max-width: 70%;
+        width: 80%;
+    }
+
+    .start-screen .console-img {
+      width: 100%;
+      height: auto;
+      left: 0;
+      z-index: 2;
+    }
+
+    .start-screen .footer {
+      color: #f1da8d;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      margin-top: -3rem;
+      letter-spacing: 1px;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .start-screen .text-top {
+        font-size: 1.2rem;
+      }
+      .start-screen .press-start {
+        font-size: 1.2rem;
+      }
+      .start-screen .footer {
+        font-size: 0.8rem;
+      }
+    }

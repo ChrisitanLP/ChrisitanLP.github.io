@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cargando...</title>
+  <style>
+    body {
+        margin: 0;
+        background-image: url("static/assets/background/back_loading.png"); /* Ruta relativa */
+        background-color: #111; /* Fallback por si no carga */
+        background-size: cover; /* Escala la imagen para cubrir toda la pantalla */
+        background-repeat: no-repeat; /* Evita que se repita */
+        background-position: center center; /* Centra la imagen */
+        background-attachment: fixed; 
+        color: #2e2d2d;
+        font-family: 'Press Start 2P', cursive;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #characterCanvas {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        right: 3.5%;
+        bottom: 10%;
+    }
+
+    #dialogContainer {
+        position: absolute;
+        right: 7%;
+        bottom: 20%;
+        width: 550px;
+        height: 490px;
+        background: url("static/assets/sprites/ui/dialog_box_loading.png") no-repeat center;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 100px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #dialogText {
+        color: #424242;
+        font-size: 13px;
+        line-height: 1.7;
+        bottom: 25px;
+    }
+
+    #loadingText {
+        color: rgb(238, 238, 237);
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        font-size: 22px;
+        font-weight: 800;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="characterCanvas"></canvas>
+  <div id="loadingText">Cargando<span id="dots">.</span></div>
+  <div id="dialogContainer"><div id="dialogText"></div></div>
+
+  <script>
+    const canvas = document.getElementById('characterCanvas');
+    const ctx = canvas.getContext('2d');
+    const frameWidth = 32;
+    const frameHeight = 32;
+    const totalFrames = 4;
+    const scale = 5;
+    let frameX = 0;
+    let frameCounter = 0;
+    const currentViewY = 0;
+
+    const characterSprites = {
+      "BIRDSPRITESHEET_White": "static/assets/sprites/characters/player/BIRDSPRITESHEET_White.png",
+      "CATSPRITESHEET_Gray": "static/assets/sprites/characters/player/CATSPRITESHEET_Gray.png",
+      "CATSPRITESHEET_Orange": "static/assets/sprites/characters/player/CATSPRITESHEET_Orange.png",
+      "FOXSPRITESHEET": "static/assets/sprites/characters/player/FOXSPRITESHEET.png",
+      "RACCOONSPRITESHEET": "static/assets/sprites/characters/player/RACCOONSPRITESHEET.png"
+    };
+
+    const advicePhrases = [
+        "La creatividad es inteligencia divirtiéndose. ",
+        "Haz que cada pixel cuente, como si fuera el primero que dibujaste.",
+        "No crees solo para mostrar, crea para conectar.",
+        "El arte no es lo que ves, sino lo que haces sentir a otros.",
+        "Sé tú mismo. Todos los demás ya están ocupados.",
+        "Un portafolio es un espejo de lo que eres, no solo de lo que haces.",
+        "La perfección no se alcanza cuando no hay nada más que agregar, sino cuando no queda nada que quitar.",
+        "No necesitas ser el mejor, solo ser auténtico.",
+        "Cada línea, cada trazo, es una historia esperando ser contada.",
+        "El mundo necesita más creadores, no más imitadores.",
+        "Diseñar no es solo embellecer; es resolver con alma.",
+        "Si lo puedes imaginar, lo puedes crear.",
+        "Hazlo con amor, o no lo hagas.",
+        "Tus errores también forman parte del arte.",
+        "Nada grande se ha logrado sin pasión.",
+        "El proceso creativo es un viaje, no una meta.",
+        "Crear es dejar una huella en el tiempo.",
+        "Lo que haces con amor, trasciende."
+    ];
+
+    const selectedCharacterKey = localStorage.getItem("personajeSeleccionado") || "CATSPRITESHEET_Orange";
+    const spriteImage = new Image();
+    spriteImage.src = characterSprites[selectedCharacterKey];
+
+    spriteImage.onload = () => {
+      imageLoaded = true;
+    };
+
+    let imageLoaded = false;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      if (!imageLoaded) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        spriteImage,
+        frameX * frameWidth, currentViewY * frameHeight, frameWidth, frameHeight,
+        (canvas.width - frameWidth * scale) / 2,
+        (canvas.height - frameHeight * scale) / 2,
+        frameWidth * scale,
+        frameHeight * scale
+      );
+
+      frameCounter++;
+      if (frameCounter % 15 === 0) {
+        frameX = (frameX + 1) % totalFrames;
+      }
+    }
+
+    animate();
+
+    // Animación de "Cargando..."
+    const dots = document.getElementById("dots");
+    let dotCount = 1;
+    setInterval(() => {
+      dotCount = (dotCount % 3) + 1;
+      dots.textContent = ".".repeat(dotCount);
+    }, 500);
+
+    // Frase en cuadro de diálogo
+    const dialogText = document.getElementById("dialogText");
+    dialogText.textContent = advicePhrases[Math.floor(Math.random() * advicePhrases.length)];
+
+    // Redirección opcional
+     setTimeout(() => {
+       window.location.href = "index.html";
+     }, 2500);
+  </script>
+</body>
+</html>
