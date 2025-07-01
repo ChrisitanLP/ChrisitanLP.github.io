@@ -6,7 +6,7 @@ import { getInteractiveInfo } from "./interactive_info.js";
 export const ContactMapConfig = {
   name: 'bottom',
   wallImage: 'static/assets/sprites/tilesets/walls/bottom_wall.png',
-  floorImage: 'static/assets/sprites/tilesets/floor/baldosa.png',
+  floorImage: 'static/assets/sprites/tilesets/floor/baldosa.PNG',
   
   // NPCs específicos del mapa de habilidades
   npcs: [
