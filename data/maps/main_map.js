@@ -6,7 +6,7 @@ import { getInteractiveInfo } from "./interactive_info.js";
 export const MainMapConfig = {
   name: 'main',
   wallImage: 'static/assets/sprites/tilesets/walls/wall_principal.png',
-  floorImage: 'static/assets/sprites/tilesets/floor/baldosa.png',
+  floorImage: 'static/assets/sprites/tilesets/floor/baldosa.PNG',
   
   // NPCs específicos del mapa principal
   npcs: [
